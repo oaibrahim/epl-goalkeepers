@@ -61,7 +61,7 @@ with open(fname) as f:
         if '<tr>' in content[i]:
             switch = 1
         elif switch == 1:
-            strClean = strClean + content[i]
+            strClean = strClean + content[i][4:len(content[i])-6] + '\n'
             switch = 0
         else:
             switch = 0
